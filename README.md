@@ -5,7 +5,7 @@ It's pretty basic, its purpose being mainly educational as it features standard 
 
 It has been developed with Eclipse and built as a jar with the Maven m2e plugin, from the project archetype *maven-archetype-quickstart*.
 
-The jar is built in the */target* folder and the project contains scripts for an easy execution.
+The jar is built in the **/target** folder and the project contains scripts for an easy execution.
 
 
 ## Description
@@ -31,4 +31,8 @@ A start script **launch\_MTServer** is also provided in two forms (.sh and .bat)
 java -cp target/mtserver-0.0.1-SNAPSHOT.jar org.thomas.mtserver.MTServer 8082
 pause
 ```
+
+Once the server started, place the files to be served in the **htdocs** folder (there's a sample index.html and also a document.txt file), open a browser and enter a URL like :
+
+localhost:8082/index.html
 
