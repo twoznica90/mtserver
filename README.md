@@ -32,6 +32,8 @@ java -cp target/mtserver-0.0.1-SNAPSHOT.jar org.thomas.mtserver.MTServer 8082
 pause
 ```
 
+Output debug messages in the console have been left for information.
+
 Once the server started, place the files to be served in the **htdocs** folder (there's a sample index.html and also a document.txt file), open a browser and enter a URL like :
 
 localhost:8082/index.html
