@@ -14,7 +14,7 @@ The jar is built in the **/target** folder and the project contains scripts for 
 
 - Then each thread is an instance of the class named **PoolThread**, which also implements the Runnable interface. It handles the client request and retreives the corresponding file from the folder *htdocs*.
 
-- The class **HttpResponseForFile** returns a valid http response based on the file to the thread instance, which sends it back to the client.
+- The class **HttpResponseForFile** returns a valid http response based on the file to the running thread, which in turn sends it back to the client.
 
 
 
