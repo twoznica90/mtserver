@@ -1,4 +1,4 @@
-## mtserver
+# mtserver
 
 This multi-threaded web server serves static files from a rocroot through GET requests only.
 It's pretty basic, its purpose being mainly educational as it features standard Java packages (no dependencies).
@@ -8,7 +8,7 @@ It has been developed with Eclipse and built as a jar with the Maven m2e plugin,
 The jar is built in the */target* folder and the project contains scripts for an easy execution.
 
 
-# Description
+## Description
 
 - The class *MTServer*, which contains the main method, implements the Runnable interface and initiates a connection with a poll thread. The max. number of threads can be configured by the user (see usage below).
 
@@ -18,7 +18,7 @@ The jar is built in the */target* folder and the project contains scripts for an
 
 
 
-# Usage
+## Usage
 
 Main method is executed with 2 arguments :
 
