@@ -20,21 +20,22 @@ The jar is built in the **/target** folder and the project contains scripts (.sh
 
 ## Usage
 
-Main method is executed with 2 arguments :
+The project already contains the built jar in the **target** folder. It can also be rebuilt with **mvn clean install**.
+To start the server, execute the jar with 2 arguments :
 
 - port number (required)
-- max number of threads (optional - default value = 10)
+- max number of threads (optional - default value = 8)
 
-A start script **launch\_MTServer** is also provided in two forms (.sh and .bat) :
+A start script **launch\_MTServer** is also provided in two forms (.sh and .bat), using port 8082:
 
 ```sh
 java -jar target/mtserver-0.0.1-SNAPSHOT.jar 8082
 pause
 ```
 
-Output debug messages in the console have been left for information.
+Some output debug messages in the bash window have been left for information.
 
-Once the server started, place the files to be served in the **htdocs** folder (there's a sample *index.html* and also a *document.txt* file), open a browser and request the URL  :
+Once the server started, place the files to be served in the **htdocs** folder (there's a sample web application for testing).  Just open a browser and request the URL  :
 
 localhost:8082
 
