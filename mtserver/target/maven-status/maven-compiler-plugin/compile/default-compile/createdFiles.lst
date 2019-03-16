@@ -1,3 +1,4 @@
-org\thomas\mtserver\HttpResponseForFile.class
-org\thomas\mtserver\PoolThread.class
+org\thomas\mtserver\HTTPRequest.class
+org\thomas\mtserver\HTTPResponse.class
 org\thomas\mtserver\MTServer.class
+org\thomas\mtserver\PoolThread.class

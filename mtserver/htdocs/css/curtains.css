@@ -1,0 +1,31 @@
+/* Global attributes for curtains */
+
+.curtain{
+    background-image: url("../assets/shade.jpg");
+    position: absolute;
+    background-color: #ab5c5a;
+    display: none;
+}
+
+/* Attributes for each curtain */
+
+#living-room-curtain {
+    top: 40.2%;
+    left: 9.6%;
+    height: 9.9%;
+    width: 7.4%;
+}
+
+#upstairs-curtain {
+    top: 21.0%;
+    left: 10.9%;
+    height: 6.2%;
+    width: 4.8%;
+}
+
+#lobby-curtain{
+    top: 40.9%;
+    left: 39.9%;
+    height: 11.3%;
+    width: 2%;
+}

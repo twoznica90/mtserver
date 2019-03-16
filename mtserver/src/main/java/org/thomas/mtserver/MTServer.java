@@ -11,7 +11,7 @@ import org.thomas.mtserver.PoolThread;
 public class MTServer implements Runnable
 {
 	// This class is derived from a server project I've developed many years ago for a customer.
-	// Since it was a single-threaded server, the pooled multi-thread implementation was inspired by :
+	// Since it was a single-threaded server, I've added a pooled multi-thread implementation inspired by :
 	//
 	// http://www.tutorialspoint.com/javaexamples/net_multisoc.htm
 	// http://www.tutorialspoint.com/java/java_thread_synchronization.htm
@@ -19,7 +19,7 @@ public class MTServer implements Runnable
 	// � 2012 TutorialsPoint.COM 
 	
 	// Program version
-	static	String currentVersion = "1.0";
+	static	String currentVersion = "2.0";
 	// Socket port
 	static int port;
 	// Number of threads handled in the pool
@@ -63,10 +63,11 @@ public class MTServer implements Runnable
 			numMaxThreads =  Integer.valueOf(args[1]);
 		else
 			// Use a default number of threads if not set in command
-			numMaxThreads =  10;
+			numMaxThreads =  8;
 		
 		// Echo starting server info
-		System.out.println("\nMultiThreadedServer assignment");
+		System.out.println("\nMultiThreadedServer");
+		System.out.println("Files to be served need to be placed in a folder named 'htdocs'");
 		System.out.println("    - current version		: " + currentVersion);
 		System.out.println("    - TCP/IP port listened	: " + args[0]);		
 		System.out.println("    - Number of threads in pool : " + numMaxThreads);
@@ -99,17 +100,16 @@ public class MTServer implements Runnable
 				{
 					// Accept new client socket
 					Socket	cs = sSock.accept();
-					System.out.println("***************");
 					System.out.println("NEW CONNECTION");
-					System.out.println("***************\n");
 
+					// Update since v1.0 :
 					// Instead of creating an instance of PoolThread to handle the client socket in a pooled thread
 					//PoolThread mThread = new PoolThread(cs);
 					// and starting the thread :
 					//new Thread(mThread).start();
 					
-					// I use the ThreadPoolExecutor to launch a thread with a fixed number of threads
-					// as described in
+					// I use the ThreadPoolExecutor to launch a thread with a fixed max. number of threads
+					// as documented in
 					// http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html
 					//
 					// Copyright � 1993, 2012, Oracle and/or its affiliates. All rights reserved. 

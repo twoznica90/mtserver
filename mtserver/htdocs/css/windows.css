@@ -1,0 +1,70 @@
+/* A window has frames, to identify visible areas for the light */
+/* Each frame is placed in a div under a window */
+
+.window {
+    position: absolute;
+}
+
+.window > div {
+    position: absolute;
+}
+
+.frame {
+    height: 100%;
+}
+
+
+/* Numbered frames are part of a window, with a fixed relative horizontal position */
+#frame-1 {
+    left: 0%;
+}
+
+#frame-2 {
+    left: 38%;
+}
+
+#frame-3 {
+    left: 75%;
+}
+
+
+
+/* Attributes for each window */
+
+/* Upstairs and living room windows have 3 frames, with the same aspect ratio */
+#living-room-window .frame {
+    width: 24%;
+}
+
+#upstairs-window .frame {
+    width: 24%;
+}
+
+/* The lobby window has a single frame */
+#lobby-window .frame {
+    width: 100%;
+    left: 0%;
+}
+
+
+
+#living-room-window {
+    top: 40.5%;
+    left: 9.9%;
+    height: 9.2%;
+    width: 7.0%;
+}
+
+#upstairs-window {
+    top: 21.2%;
+    left: 11.0%;
+    height: 5.6%;
+    width: 4.6%;
+}
+
+#lobby-window {
+    top: 40.9%;
+    left: 39.9%;
+    height: 11.3%;
+    width: 2%;
+}

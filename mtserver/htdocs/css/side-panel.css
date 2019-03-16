@@ -1,0 +1,16 @@
+/*Side panel styling */
+
+.side-panel {
+    font-family: 'Verdana', sans-serif;
+    width: auto\9;  /* ie8 */
+    vertical-align: text-top;
+    position: relative;
+}
+
+.button {
+    opacity: 0.5;
+}
+
+.button:hover {
+    opacity: 1;
+}

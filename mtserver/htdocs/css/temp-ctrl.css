@@ -1,0 +1,30 @@
+#temp-ctrl {
+    position: absolute;
+}
+
+.temp-button {
+    position: absolute;
+    outline: none;
+    background-color: Transparent;
+    border: none;
+    width: 60px;
+    height: 50px;
+    left: 76px;
+}
+
+.temp-up-button {
+    top: 15px;
+}
+
+.temp-down-button {
+    top: 75px;
+}
+
+.temp-digits {
+    position: absolute;
+    top: 100px;
+    left: 79px;
+    font-family: 'VT323', monospace;
+    font-size: 250%;
+    color: dimgray;
+}
